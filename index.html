@@ -6,69 +6,148 @@
   <title>Learn with Aqsa</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      color: #333;
       margin: 0;
       padding: 0;
+      animation: fadeIn 2s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     header {
-      background: #333;
-      color: #fff;
-      padding: 20px 0;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      padding: 30px 10px;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      animation: slideDown 1.5s ease-out;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
     nav {
-      background: #555;
-      padding: 10px;
+      background: #ffcc70;
+      padding: 12px;
       text-align: center;
     }
     nav a {
-      color: white;
+      color: #333;
       margin: 0 15px;
       text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #0072ff;
     }
     section {
-      padding: 20px;
+      padding: 30px;
+      animation: fadeInSection 1s ease-in;
+    }
+    @keyframes fadeInSection {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .tutorial {
-      background: white;
-      margin: 15px 0;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: #ffffff;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 12px;
+      border-left: 6px solid #0072ff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .tutorial:hover {
+      transform: scale(1.02);
     }
     footer {
-      background: #333;
+      background: linear-gradient(to right, #0072ff, #00c6ff);
       color: white;
       text-align: center;
-      padding: 10px 0;
-      position: relative;
-      bottom: 0;
+      padding: 15px 0;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-in;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 180px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    form input, form textarea, form button {
+      display: block;
       width: 100%;
+      max-width: 400px;
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background: #0072ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background: #005ac4;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Learn with Aqsa</h1>
-    <p>Your place for Graphic Design, Typing & CV Tutorials</p>
+    <h1>🌟 Learn with Aqsa 🌟</h1>
+    <p>Graphics, Typing & CV Tips Made Easy!</p>
   </header>
 
   <nav>
+    <a href="#about">About</a>
     <a href="#graphics">Graphic Design</a>
     <a href="#typing">Typing</a>
     <a href="#cv">CV Design</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
   </nav>
+
+  <section id="about">
+    <div class="tutorial">
+      <h2>🙋‍♀ About Me</h2>
+      <p>Hello! I'm <strong>Aqsa Rani</strong>, a passionate software engineering student with skills in graphic design, typing, and CV building. I love helping others through simple, easy-to-understand tutorials.</p>
+      <p>🌟 My goal: Help learners grow faster by sharing practical, creative content.</p>
+      <p>💻 Skills: Canva, Photoshop, Typing, Resume Writing, HTML/CSS</p>
+      <p>📚 Currently learning: Frontend development & freelancing!</p>
+    </div>
+  </section>
 
   <section id="graphics">
     <div class="tutorial">
       <h2>🎨 Graphic Design Tutorials</h2>
-      <p>Learn how to use Canva, Adobe Photoshop, and Illustrator for designing posters, logos, and more.</p>
+      <p>Learn Canva, Adobe Photoshop, and Illustrator to create logos, posters, social media posts & more.</p>
       <ul>
-        <li>Canva Basics Tutorial (YouTube Link)</li>
-        <li>Free Logo Design in Photoshop</li>
-        <li>Poster Design in Illustrator</li>
+        <li>Canva Basics – Create posters in minutes!</li>
+        <li>Photoshop for beginners – Free tools</li>
+        <li>Logo design from scratch</li>
       </ul>
     </div>
   </section>
@@ -76,11 +155,11 @@
   <section id="typing">
     <div class="tutorial">
       <h2>⌨ Typing Practice</h2>
-      <p>Improve your typing speed and accuracy using free tools and techniques.</p>
+      <p>Boost your typing speed with fun and easy practice guides!</p>
       <ul>
-        <li>Typing.com Guide</li>
-        <li>Daily Practice Plan</li>
-        <li>Typing Tips for Beginners</li>
+        <li>Typing.com daily lessons</li>
+        <li>Speed tests and games</li>
+        <li>English + Urdu typing techniques</li>
       </ul>
     </div>
   </section>
@@ -88,17 +167,44 @@
   <section id="cv">
     <div class="tutorial">
       <h2>📄 CV & Resume Design</h2>
-      <p>Step-by-step guide to creating a modern CV using MS Word and Canva.</p>
+      <p>Create stunning resumes using Canva or MS Word.</p>
       <ul>
-        <li>Modern CV Template (Free Download)</li>
-        <li>CV Design on Canva</li>
-        <li>How to Write a Professional Resume</li>
+        <li>Download free templates</li>
+        <li>Step-by-step formatting guide</li>
+        <li>Tips for job-winning CVs</li>
       </ul>
     </div>
   </section>
 
+  <section id="gallery">
+    <div class="tutorial">
+      <h2>🖼 My Gallery</h2>
+      <div class="gallery">
+        <img src="profile.jpg" alt="My Profile Picture">
+        <img src="design1.jpg" alt="Design 1">
+        <img src="design2.jpg" alt="Design 2">
+      </div>
+      <p>These are some of my works and profile images. More updates coming soon!</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="tutorial">
+      <h2>📬 Contact Me</h2>
+      <p>If you want to work with me, ask a question, or give feedback, feel free to reach out!</p>
+      <form onsubmit="return false;">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">📨 Send Message</button>
+      </form>
+      <p style="margin-top: 10px;">You can also reach me at: <strong>aqsa.rani@email.com</strong></p>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 Aqsa Rani | Learn with Aqsa</p>
+    <p>© 2025 Aqsa Rani | Designed with 💙 for learners</p>
   </footer>
 
 </body>
